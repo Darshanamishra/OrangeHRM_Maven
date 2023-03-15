@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/Ruhi/IdeaProjects/OrangeHRM">
-        <classes/>
+    <test name="OrangeHRM Login Positive Test Case">
+        <classes>
+            <class name="OrangeHRM.Login">
+                <methods>
+                    <include name="ValidLogin">
+                    </include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="OrangeHRM Login Negative Test Case">
+        <classes>
+            <class name="OrangeHRM.Login">
+                <methods>
+                    <include name="InvalidUsernameLogin"/>
+                    <include name="InvalidPassLogin"/>
+                    <include name="InvalidUsernamePassLogin"/>
+                    <include name="InvalidLoginEmptyUsername"/>
+                    <include name="InvalidLoginEmptyPass"/>
+                </methods>
+            </class>
+        </classes>
     </test>
 </suite>
